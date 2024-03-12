@@ -20,7 +20,7 @@
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="{{ route('dashboard') }}">
+                <a class="nav-link" href="{{ route('products') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Product</span></a>
             </li>
