@@ -8,6 +8,11 @@
         <a href="{{route('products.create')}}" class="btn btn-primary">Add Product</a>
     </div>
     <hr />
+    @if(Session::has('success'))
+    <div class="alert alert-success" role="alert">
+        {{Session::get('success')}}
+    </div>
+    @endif
     <table class="table table-hover">
         <thead class="table-primary">
             <tr>
