@@ -30,7 +30,11 @@
                 <tr>
                     <td class="align-middle">{{$loop->iteration}}</td>
                     <td class="align-middle">{{$rs->title}}</td>
+                    @if ($rs->price <= '1000')
+                    <td class="align-middle text-danger">{{$rs->price}}</td>
+                    @else
                     <td class="align-middle">{{$rs->price}}</td>
+                    @endif
                     <td class="align-middle">{{$rs->product_code}}</td>
                     <td class="align-middle">{{$rs->description}}</td>
                     <td class="align-middle">
