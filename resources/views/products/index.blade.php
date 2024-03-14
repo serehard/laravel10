@@ -35,8 +35,9 @@
                     <td class="align-middle">{{$rs->description}}</td>
                     <td class="align-middle">
                         <div class="btn-group" role="group" aria-lable="Basic example">
-                            <a href="{{route('products.show', $rs->id)}}" type="button" class="btn btn-secondary">Detail</a>
+                            <a href="{{route('products.show', Crypt::encryptString($rs->id))}}" type="button" class="btn btn-secondary">Detail</a>
                             <a href="{{route('products.edit', $rs->id)}}" type="button" class="btn btn-warning">Edit</a>
+                            <!-- <a href="{{route('products.destroy', $rs->id)}}" type="button" class="btn btn-danger">Hapus</a> -->
                             <form action="{{route('products.destroy', $rs->id)}}" method="POST" type="button" class="btn btn-danger">
                                 @csrf
                                 @method('DELETE')
